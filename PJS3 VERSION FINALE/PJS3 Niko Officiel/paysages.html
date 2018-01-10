@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Cherry+Swash'>
+<style>
+
+@font-face{
+font-family:"Avenir Light";
+src:url("./font/AvenirLTStd-Light.otf");
+}
+
+.menu{
+	opacity:0.9;
+}
+
+.menu ul, .menu li {
+	margin: 0;
+	padding: 0;
+}
+.menu ul {
+	background: gray;
+	list-style: none;
+	width: 100%;
+}
+.menu li {
+	float: left;
+	position: relative;
+	width:auto;
+}
+.menu a {
+	background:#5a6C3a;;
+	color: #FFFFFF;
+	display: block;
+	font: bold 15px/20px sans-serif;
+	padding: 15px 129.3px;
+	text-align: center;
+	text-decoration: none;
+	-webkit-transition: all 0.55s ease;
+	-moz-transition: all 0.55s ease;
+	-ms-transition: all 0.55s ease;
+	-o-transition: all 0.55s ease;
+	transition: all 0.55s ease;
+}
+.menu li:hover a {
+	background:white;
+	color:#5a6C3a;
+}
+
+
+body {
+	font-size: 12px;
+	font-family: sans-serif;
+	background: #2c3e50;
+}
+
+
+
+body{
+ background-image:url("./IMAGES/background.jpg");
+ background-repeat:no-repeat
+}
+
+* {box-sizing:border-box}
+body {font-family: Verdana,sans-serif;margin:0}
+.mySlides {display:none}
+
+/* Slideshow container */
+.slideshow-container {
+  width:100%;
+  position: absolute;
+  margin:auto;
+}
+
+
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot{
+  position:relative;
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+.point {
+	margin-top:44%;
+}
+.paysage{
+	margin-top:160px;
+}
+
+.parc,.lieux,.gastronomie{
+	margin-top:50px;
+}
+
+.footer{
+	background-color:black;
+	text-align:center;
+	font-size:200%;
+	font-family:"Georgia";
+	font-style:italic;
+	font-weight:bold;
+	color:white;
+	padding-left:20%;
+	padding-right:20%;
+	opacity:0.5;
+	float:left;
+}
+
+.titre{
+	position:absolute;
+	top:40%;
+	left:50%;
+	margin-left:-379px;
+	font-size:450%;
+	color:#f2f2f2;
+	font-style:bold;
+}
+
+.header_page{
+	width:100%;
+	height:400px;
+	background-image:url("./IMAGES/bg-paysage.jpg");
+	background-repeat:no-repeat;
+}
+
+.black{
+	width:100%;
+	height:400px;
+	position:relative;
+	background-color:black;
+	opacity:0.5;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+
+.titre-paysage{
+	position:absolute;
+	font-size:450%;
+	color:#f2f2f2;
+	font-style:bold;
+	opacity:1;
+	font-family:Georgia;
+	font-style:italic;
+}
+
+
+.texte-page{
+	margin: 0 auto;
+	margin-top:60px;
+	width:55%;
+	height:auto;
+	background-color:white;
+	opacity:0.7;
+	float:left;
+	position:relative;
+	left:22.5%;
+}
+
+.intro{
+margin-top:30px;
+margin-left:40px;
+margin-right:40px;
+line-height: 240%;
+font-family:Avenir Light;
+font-size:120%;
+color:#696969;
+
+}
+
+.titrePaysage{
+text-align:center;
+font-family:Avenir Light;
+font-size:150%;
+font-family:Georgia;
+}
+
+
+.paradroit{
+margin-left:440px;
+margin-right:40px;
+font-family:Avenir Light;
+line-height: 240%;
+font-size:120%;
+color:#696969;
+}
+
+.paragauche{
+margin-left:40px;
+margin-right:440px;
+font-family:Avenir Light;
+line-height: 240%;
+font-size:120%;
+color:#696969;
+}
+
+.logo{
+background-image:url(./IMAGES/logo.png);
+margin-top:10px;
+background-repeat: no-repeat;
+width:50%;
+height:300px;
+display: flex;
+justify-content: center;
+align-items:center;
+margin-left:37%;
+}
+
+</style>
+</head>
+<body>
+<div class="header_page">
+<div class="black">
+<div class="titre-paysage">Paysages</div>
+</div>
+</div>
+
+<nav class="menu">
+	<ul>
+		<li><a href="accueil.html">Accueil</a></li>
+		<li><a href="paysages.html">Paysages</a></li>
+		<li><a href="lieux.html">Lieux</a></li>
+		<li><a href="parcs.html">Parcs</a></li>
+		<li><a href="gastronomie.html">Gastronomie</a></li>
+		<li><a href="contact.html">Contact</a></li>
+	</ul>
+</nav>
+
+<div class="texte-page">
+
+<div class = "intro">
+<h2>La région Auvergne-Rhône-Alpes, 3ème région de France métropolitaine en terme de superficie, peut se targuer d’avoir un des
+relief les plus variés de France. Volcans, Montagnes ou encore Lacs : découvrez avec nous ce qui constitue ce merveilleux
+paysage.
+</h2>
+</div>
+
+<br>
+<br>
+<br>
+
+<div class = "titrePaysage">
+<h1>La Chaîne des Puys</h1>
+</div>
+
+<br>
+<br>
+
+<div class = "paradroit">
+<h2>Cette chaîne de volcans est situé dans le département du Puy du Dôme sur une étendue de 4 à 5 km de large pour une longueur de 45 km !
+Comptabilisant un ensemble de 80 volcans, elle constitue une des chaînes de volcans les plus massives d’Europe. Le point culminant de la
+chaîne se trouvant sur le “Puy de Dôme” à plus de 1.4km de hauteur. La chaîne des Puys , grâce au patrimoine historique qu’elle représente, est candidate à la liste du patrimoine mondial de l’UNESCO.
+Il vous sera possible de visiter ce paysage à couper le souffle par le biais d’un sentier de grande randonnée, le GR4 , qui relie l’Océan
+Atlantique à la Méditerranée.</h2>
+</div>
+
+<br>
+<br>
+
+<div class = "titrePaysage">
+<h1>Les Alpes</h1>
+</div>
+
+<br>
+<br>
+
+<div class = "paragauche">
+<h2>La chaîne de Montagne des Alpes s’étendant sur une surface de 190 959 km² sur 8 pays d’Europe se trouve à 20% dans la
+Région-Rhône-Alpes. La région accueille également en son sein le “Mont-Blanc” l’un des sommets les plus hauts du monde et le point
+culminant des Alpes à une hauteur de 4,8 km. Paysage d’une beauté émouvante, la zone des Alpes propose une diversité de faune et de flore
+impressionnante. Entre Pics et Cols venez découvrir un décor merveilleux que vous n’oublierez jamais.
+En Auvergne-Rhône-Alpes, vous aurez accès à de nombreux circuits d’alpinisme afin de profiter d’un panorama unique.</h2>
+</div>
+
+<br>
+<br>
+
+<div class = "titrePaysage">
+<h1>Le Lac d'Annecy</h1>
+</div>
+
+<br>
+<br>
+
+<div class = "paradroit">
+<h2>Le “lac bleu” d’une superficie de 27,59 km² dans le département de la Haute-Savoie est un des lacs les plus beaux à voir en France.
+En effet la pureté de l’eau ainsi que sa transparence vous offre un spectacle époustouflant. La commune d’Annecy vous propose également
+diverses activités intéressantes sur le lac telles que du kitesurf, du kayak ou encore du pédalo.
+Venez découvrir un endroit inoubliable et passez un agréable moment en famille.</h2>
+</div>
+
+<br>
+<br>
+
+<div class = "intro">
+<h2>La région Auvergne-Rhône-Alpes propose un des patrimoines naturels les plus variés de France. Randonnées, Ski ou encore Sports
+nautiques, la région vous propose d’excellentes activités afin de découvrir dans toute sa grandeur le paysage alpin. On n’attend plus que
+vous !
+</h2>
+</div>
+
+<br>
+<br>
+
+<div class ="logo">
+
+</div>
+
+</div>
+
+<div class="footer">
+<span class="font-f">Site web réalisé par Thibault DUGAUQUIER, Rémi BONNETO, Ilan BEN-SOUSSAN et Nikola MILOSEVIC
+</span>
+</div>
+
+
+</body>
+</html> 

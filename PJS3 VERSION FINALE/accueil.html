@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Cherry+Swash'>
+ <link rel="stylesheet" href="css/accueil.css" />
+
+</head>
+<body>
+
+<nav>
+	<a href="paysages.html">Paysages</a>
+	<a href="lieux.html">Lieux</a>
+	<a href="parcs.html">Parcs</a>
+	<a href="gastronomie.html">Gastronomie</a>
+	<a href="contact.html">Contact</a>
+</nav>
+
+<div class="slideshow-container">
+
+	<div class="mySlides fade">
+		<img src="./IMAGES/volcan.jpg" style="width:100%">
+	</div>
+
+	<div class="mySlides fade">
+		<img src="./IMAGES/montagne.jpg" style="width:100%">
+	</div>
+
+	<div class="mySlides fade">
+		<img src="./IMAGES/colline.jpg" style="width:100%">
+	</div>
+
+	<div class="mySlides fade">
+		<img src="./IMAGES/lac.jpg" style="width:100%">
+	</div>
+
+	<span class="titre"><b><font color="#f2f2f2">I</font> <font color="#FE0000">L'Auv</font><font color="#f2f2f2">ergne-Rhône-Alpes</font></b></span>
+
+	<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+	<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+	<div class="point" style="text-align:center">
+		<span class="dot" onclick="currentSlide(1)"></span> 
+		<span class="dot" onclick="currentSlide(2)"></span> 
+		<span class="dot" onclick="currentSlide(3)"></span> 
+		<span class="dot" onclick="currentSlide(4)"></span> 
+	</div>
+
+
+</div>
+
+<div class="paysage">
+		<div class="titrePartie">
+			<h1>Paysages</h1>
+		</div>
+	<div class="presentation">
+		<div class="intro">
+			<h2>La région est riche en paysages divers et variés puisqu’elle est composée de célèbres chaînes de volcans tels que les monts du Cantal et la chaîne du Puy ou encore de chaîne de montagne tels que les Alpes.</h2>
+		</div>
+		<div>
+			<a href="paysages.html"><input class="savoirPlus" type="button" value="En savoir plus"></a>
+		</div>
+	</div>
+</div>
+
+<div class="lieux">
+	<div class="titrePartie">
+		<h1>Lieux touristiques</h1>
+	</div>
+	<div class="presentation">
+		<div class="intro">
+			<h2>Du fait de sa diversité géographique, la région propose de nombreux lieux d’intérêts ainsi que de destinations touristiques tels que la commune de Chamonix ou encore le magnifique Château de Val.</h2>
+		</div>
+		<div>
+			<a href="lieux.html"><input class="savoirPlus" type="button" value="En savoir plus"></a>
+		</div>
+	</div>
+</div>
+
+<div class="parc">
+	<div class="titrePartie">
+		<h1>Parcs d'attractions et parcs naturels</h1>
+	</div>
+	<div class="presentation">
+		<div class="intro">
+			<h2>La région Auvergne Rhône-Alpes dispose de même de multiples choix pour passer un agréable moment en famille ou avec ses amis. On y trouve notamment le parc naturel de la Chartreuse ou encore le célèbre parc d’attraction Vulcania.</h2>
+		</div>
+		<div>
+			<a href="parcs.html"><input class="savoirPlus" type="button" value="En savoir plus"></a>
+		</div>
+	</div>
+</div>
+
+<div class="gastronomie">
+	<div class="titrePartie">
+		<h1>Gastronomie</h1>
+	</div>
+	<div class="presentation">
+		<div class="intro">
+			<h2>La région est aussi célèbre pour ses spécialités culinaires qui s’exportent au delà de nos frontières, et est composée d’un pôle gastronomique particulièrement développé à Lyon, la capitale mondiale de la gastronomie.</h2>
+		</div>
+		<div>
+			<a href="gastronomie.html"><input class="savoirPlus" type="button" value="En savoir plus"></a>
+		</div>
+	</div>
+</div>
+
+<div class="footer">
+	<span class="font-f">Site web réalisé par Thibault DUGAUQUIER, Rémi BONNETO, Ilan BEN-SOUSSAN et Nikola MILOSEVIC </span>
+</div>
+
+<!-- HTML pour le bouton de retour en début de page -->
+<button onclick="topFunction()" id="myBtn" title="Revenir en haut de page">Haut de page</button>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1} 
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none"; 
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block"; 
+  dots[slideIndex-1].className += " active";
+}
+
+
+// JAVASCRIPT pour le bouton de retour en début de page
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+function topFunction() {
+    document.documentElement.scrollTop = 0;
+}
+</script>
+
+</body>
+</html> 
